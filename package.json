@@ -1,0 +1,33 @@
+{
+  "name": "aggretsuko-karaoke",
+  "version": "1.0.0",
+  "description": "A karaoke lovers app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/seeds.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corgimaman/aggretsukos-bar.git"
+  },
+  "author": "Celeste, Erick, Ida, Jesse, Kevin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/corgimaman/aggretsukos-bar/issues"
+  },
+  "homepage": "https://github.com/corgimaman/aggretsukos-bar#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.6.2"
+  }
+}
