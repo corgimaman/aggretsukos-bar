@@ -27,41 +27,41 @@ Aggretsukos is a website designed to elevate karaoke bar experiences for both em
 ## User Story
 
 For Guests:
+  AS A User who wants to party all night  
+  I WANT to avoid giving my card to bartenders, be notified via my mobile device when it is my turn to perform, log-in and see my previous song history and order history, be given approximate wait times for food and beverages.  
+  SO THAT I can have a seamless, great night with my friends  
 
 For Employees:  
-
-AS A User who wants to maintain guest safety, expedite service and increases sales  
-I WANT an application that pre-verifies legal age, sends electronic receipt of sales, and automatically cuts of sale of alcohol once guest has reached the state's suggested maximum consumption every 60 minutes and auto reccommends food menu items
-SO THAT they can have a great time and get home safely
+  AS A User who wants to maintain guest safety, expedite service and increases sales  
+  I WANT an application that pre-verifies legal age, sends electronic receipt of sales, and automatically cuts of sale of alcohol once guest has reached the state's suggested maximum consumption every 60 minutes and auto recommends food menu items  
+  SO THAT they can have a great time and get home safely  
 
 
 ## Acceptance Criteria
 
-GIVEN that a user logs into the application  
-WHEN the user log in  
-THEN they are presented with   
+GIVEN that a user accesses the application  
+WHEN the user is asked to verify legal age  
+THEN they are presented with the application's homepage to log-in  
 
-GIVEN that a user wants to make a song request
-WHEN the user has ordered the venue's minimum of two menu items
-THEN the song request tab is enabled and the user can make a request
+GIVEN that a user wants to make a song request  
+WHEN the user has ordered the venue's minimum of two menu items  
+THEN the song request tab is enabled and the user can make a request  
 
-WHEN a user has chosen a song request
-THEN user should be presented with recipe choices.
+WHEN a user has chosen a song request  
+THEN the user should be alerted with approximate wait time until performance and/or their number in line  
 
-GIVEN that a user has been presented with menu choices
-WHEN the user is viewing the resulting items 
-THEN the user is able to confirm ID via mobile app, purchase through app and view receipt
+GIVEN that a user has been presented with menu choices  
+WHEN the user is viewing the resulting items  
+THEN the user is able to confirm ID via mobile app, purchase through app and view receipt  
 
-GIVEN that a server receives an order
-WHEN the server views how many drinks a guest has ordered and has observed the guest
-THEN the server can decide whether or not to disable alcohol menu ordering.
+GIVEN that a server receives an order  
+WHEN the server views how many drinks a guest has ordered and has observed the guest  
+THEN the server can decide whether or not to disable alcohol menu ordering.  
 
 
 ## Wireframes
-![project wireframe](./assets/homescreen-proj2) 
-![project wireframe2](./assets/userscreen-proj2)
-
-
+![project wireframe](./assets/homescreen-proj2.png)  
+![project wireframe2](./assets/userscreen-proj2.png)  
 
 ## Contributors
 
