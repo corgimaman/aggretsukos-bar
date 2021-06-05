@@ -1,3 +1,6 @@
+// queue has many users
+// queue has many songs
+// user has many songs
 const Album = require('./album');
 const Artist = require('./artist');
 const Genre = require('./genre');
@@ -19,3 +22,4 @@ module.exports = {
     Length,
     Song
 };
+
