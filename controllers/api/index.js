@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes');
 const songRoutes = require('./songRoutes');
 
 router.use('/users', userRoutes);
-router.use('/projects', songRoutes);
+router.use('/songs', songRoutes);
 
 module.exports = router;
