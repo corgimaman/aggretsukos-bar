@@ -26,12 +26,14 @@ Aggretsukos is a website designed to elevate karaoke bar experiences for both em
 
 ## User Story
 
-For Guests:
+For Guests:  
+
   AS A User who wants to party all night  
   I WANT to avoid giving my card to bartenders, be notified via my mobile device when it is my turn to perform, log-in and see my previous song history and order history, be given approximate wait times for food and beverages.  
   SO THAT I can have a seamless, great night with my friends  
 
 For Employees:  
+
   AS A User who wants to maintain guest safety, expedite service and increases sales  
   I WANT an application that pre-verifies legal age, sends electronic receipt of sales, and automatically cuts of sale of alcohol once guest has reached the state's suggested maximum consumption every 60 minutes and auto recommends food menu items  
   SO THAT they can have a great time and get home safely  
@@ -85,11 +87,11 @@ Ida Shalilian, Group Leader
 ## Contact
 If you have any questions about this repository, contact with us via GitHub (links above) or email:
 
-Ida Shalilian | helloidaworld@gmail.com
-Kevin Henley | kevinhenleyinfo@gmail.com
-Jesse Ceniceros | JCeniceros_10@yahoo.com
-Erick Flores | ferick8246@gmail.com
-Celeste Moore | celestealexmoore@gmail.com
+Ida Shalilian | helloidaworld@gmail.com  
+Kevin Henley | kevinhenleyinfo@gmail.com  
+Jesse Ceniceros | JCeniceros_10@yahoo.com  
+Erick Flores | ferick8246@gmail.com  
+Celeste Moore | celestealexmoore@gmail.com  
 
 ## Project Status
 In Hella Progress
