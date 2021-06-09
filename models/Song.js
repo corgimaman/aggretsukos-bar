@@ -25,7 +25,7 @@ Song.init(
                 key: 'id'
             }
         },
-        album_id: {
+        /*album_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'album',
@@ -38,7 +38,7 @@ Song.init(
                 model: 'genre',
                 key: 'id'
             }
-        },
+        },*/
     },
     {
         sequelize,

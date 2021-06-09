@@ -21,13 +21,13 @@ Album.init(
                 key: 'id'
             }
         },
-        genre_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'genre',
-                key: 'id'
-            }
-        }
+        // genre_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'genre',
+        //         key: 'id'
+        //     }
+        // }
     },
     {
         sequelize,

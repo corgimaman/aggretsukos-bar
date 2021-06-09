@@ -13,6 +13,7 @@ Favorites.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
               model: 'user',
               key: 'id',
@@ -20,6 +21,7 @@ Favorites.init(
         },
         song_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
               model: 'song',
               key: 'id',

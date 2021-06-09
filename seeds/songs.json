@@ -1,0 +1,167 @@
+[
+    {
+        "song_name": "September",
+        "length": 215,
+        "artist_id": 1
+    },
+    {
+        "song_name": "I Wanna Dance with Somebody",
+        "length": 291,
+        "artist_id": 2
+    },
+    {
+        "song_name": "Africa",
+        "length": 295,
+        "artist_id": 3
+    },
+    {
+        "song_name": "Stand by Me",
+        "length": 180,
+        "artist_id": 4
+    },
+    {
+        "song_name": "Footloose",
+        "length": 226,
+        "artist_id": 5
+    },
+    {
+        "song_name": "Sweet Dreams",
+        "length": 216,
+        "artist_id": 6
+    },
+    {
+        "song_name": "This Love",
+        "length": 206,
+        "artist_id": 7
+    },
+    {
+        "song_name": "Mr. Brightside",
+        "length": 222,
+        "artist_id": 8
+    },
+    {
+        "song_name": "Hey Ya!",
+        "length": 235,
+        "artist_id": 9
+    },
+    {
+        "song_name": "Don't Stop Believin'",
+        "length": 248,
+        "artist_id": 10
+    },
+    {
+        "song_name": "I Want It That Way",
+        "length": 214,
+        "artist_id": 11
+    },
+    {
+        "song_name": "Billie Jean",
+        "length": 294,
+        "artist_id": 12
+    },
+    {
+        "song_name": "Uptown Girl",
+        "length": 198,
+        "artist_id": 13
+    },
+    {
+        "song_name": "Escape (The Pina Colada Song)",
+        "length": 276,
+        "artist_id": 14
+    },
+    {
+        "song_name": "Come On Eileen",
+        "length": 206,
+        "artist_id": 15
+    },
+    {
+        "song_name": "All Star",
+        "length": 200,
+        "artist_id": 16
+    },
+    {
+        "song_name": "Wonderwall",
+        "length": 259,
+        "artist_id": 17
+    },
+    {
+        "song_name": "Stayin Alive",
+        "length": 285,
+        "artist_id": 18
+    },
+    {
+        "song_name": "Take on Me",
+        "length": 225,
+        "artist_id": 19
+    },
+    {
+        "song_name": "Rehab",
+        "length": 214,
+        "artist_id": 20
+    },
+    {
+        "song_name": "Ignition - Remix",
+        "length": 186,
+        "artist_id": 21
+    },
+    {
+        "song_name": "You Give Love A Bad Name",
+        "length": 223,
+        "artist_id": 22
+    },
+    {
+        "song_name": "Kiss",
+        "length": 226,
+        "artist_id": 23
+    },
+    {
+        "song_name": "Wannabe",
+        "length": 173,
+        "artist_id": 24
+    },
+    {
+        "song_name": "Uptown Funk",
+        "length": 270,
+        "artist_id": 25
+    },
+    {
+        "song_name": "Faith",
+        "length": 193,
+        "artist_id": 26
+    },
+    {
+        "song_name": "Oops!... I Did It Again",
+        "length": 211,
+        "artist_id": 27
+    },
+    {
+        "song_name": "Lola",
+        "length": 246,
+        "artist_id": 28
+    },
+    {
+        "song_name": "Respect",
+        "length": 142,
+        "artist_id": 29
+    },
+    {
+        "song_name": "Yesterday",
+        "length": 126,
+        "artist_id": 30
+    },
+    {
+        "song_name": "Funky Cold Medina",
+        "length": 248,
+        "artist_id": 31
+    },
+    {
+        "song_name": "I Wish",
+        "length": 249,
+        "artist_id": 32
+    },
+    {
+        "song_name": "Tearin' up My Heart",
+        "length": 211,
+        "artist_id": 33
+    }
+]
