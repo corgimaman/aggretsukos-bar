@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
-class Album extends Model { }
+class Album extends Model {}
 
 Album.init(
     {
@@ -17,7 +17,14 @@ Album.init(
         artist_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: artist,
+                model: 'artist',
+                key: 'id'
+            }
+        },
+        genre_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'genre',
                 key: 'id'
             }
         }

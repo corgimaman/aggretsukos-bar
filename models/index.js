@@ -1,11 +1,12 @@
 // queue has many users
 // queue has many songs
 // user has many songs
-const Album = require('./album');
-const Artist = require('./artist');
-const Genre = require('./genre');
-const Length = require('./length');
-const Song = require('./song');
+const Album = require('./Album');
+const Artist = require('./Artist');
+const Genre = require('./Genre');
+const Length = require('./Length');
+const Song = require('./Song');
+const User = require('./User');
 
 Song.belongsTo(Length)
 Length.belongsTo(Genre)
