@@ -43,6 +43,14 @@ User.init(
         len: [8],
       },
     },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isNumeric: true,
+        min: 21,
+      }
+    }
   },
   {
     hooks: {
