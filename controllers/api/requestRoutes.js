@@ -1,7 +1,5 @@
 const router = require('express').Router();
-const { Song } = require('../../models/Song');
-
-
+const { Song } = require('../../models/');
 
 // puts a request for a song in the que
 router.post('/', (req, res) => {

@@ -1,25 +1,24 @@
 // queue has many users
 // queue has many songs
-// user has many songs
-const Album = require('./album');
-const Artist = require('./artist');
-const Genre = require('./genre');
-const Length = require('./length');
-const Song = require('./song');
+// user has many favorite songs
+// user has 1 request(?)
+const Favorites = require('./Favorites');
+const Order = require('./Order');
+const Queue = require('./Queue');
+const Requests = require('./Requests');
+const Song = require('./Song');
+const User = require('./User');
 
-Song.belongsTo(Length)
-Length.belongsTo(Genre)
-Genre.belongsTo(Artist)
-Artist.belongsTo(Album)
 
-Genre.hasMany(Song)
+
 
 
 module.exports = {
-    Album,
-    Artist,
-    Genre,
-    Length,
-    Song
+    Favorites,
+    Order,
+    Queue,
+    Requests,
+    Song,
+    User
 };
 
