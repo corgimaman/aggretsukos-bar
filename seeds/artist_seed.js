@@ -59,7 +59,7 @@ const artist = [
     artist_name: 'a-ha',
   },
   {
-    artist_name: 'Amy Winehous',
+    artist_name: 'Amy Winehouse',
   },
   {
     artist_name: 'R. Kelly',

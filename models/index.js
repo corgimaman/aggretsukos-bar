@@ -55,17 +55,17 @@ Song.belongsTo(Album, {
     foreignKey: 'album_id'
 });*/
 
-Song.hasOne(Artist);
-Song.belongsTo(Artist, {
-    foreignKey: 'artist_id'
-});
+//Song.hasOne(Artist);
+// Song.belongsTo(Artist, {
+//     foreignKey: 'artist_id'
+// });
 
 
 module.exports = {
-    Album,
+    //Album,
     Artist,
     Favorites,
-    Genre,
+   // Genre,
     Order,
     Queue,
     Requests,

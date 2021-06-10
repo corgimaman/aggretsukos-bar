@@ -18,6 +18,12 @@ Song.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        /*{
+            artist: {
+                type: DataTypes.STRING,
+                allowNull: false
+            }
+        },*/
         artist_id: {
             type: DataTypes.INTEGER,
             references: {
