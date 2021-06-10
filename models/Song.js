@@ -8,7 +8,8 @@ Song.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         song_name: {
             type: DataTypes.STRING,
@@ -28,7 +29,7 @@ Song.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'song',
+        modelName: 'songs',
     }
 );
 

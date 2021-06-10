@@ -2,9 +2,6 @@
 // queue has many songs
 // user has many favorite songs
 // user has 1 request(?)
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
-
 const Favorites = require('./Favorites');
 const Order = require('./Order');
 const Queue = require('./Queue');
