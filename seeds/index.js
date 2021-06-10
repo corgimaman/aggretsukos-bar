@@ -1,7 +1,3 @@
-//const seedAlbum = require('./album_seed');
-const seedArtist = require('./artist_seed');
-//const seedGenre = require('./genre_seed');
-//const seedSong = require('./song_seed');
 const { Song } = require('../models');
 const songData = require('./songs.json')
 
@@ -14,18 +10,7 @@ const seedAll = async () => {
 
     await Song.bulkCreate(songData);
     console.log('\n----- SONGS SEEDED -----\n');
-    
-   /* await seedAlbum();
-    console.log('\n----- ALBUM SEEDED -----\n');*/
-    
-    await seedArtist();
-    console.log('\n----- ARTIST SEEDED -----\n');
-    
-   /* await seedGenre();
-    console.log('\n----- GENRE SEEDED -----\n');
-    
-    await seedSong();
-    console.log('\n----- SONG SEEDED -----\n');*/
+
 
     process.exit(0);
 };

@@ -2,166 +2,166 @@
     {
         "song_name": "September",
         "length": 215,
-        "artist_id": 1
+        "artist": "Earth, Wind, and Fire"
     },
     {
         "song_name": "I Wanna Dance with Somebody",
         "length": 291,
-        "artist_id": 2
+        "artist": "Whitney Houston"
     },
     {
         "song_name": "Africa",
         "length": 295,
-        "artist_id": 3
+        "artist": "Toto"
     },
     {
         "song_name": "Stand by Me",
         "length": 180,
-        "artist_id": 4
+        "artist": "Ben E. King"
     },
     {
         "song_name": "Footloose",
         "length": 226,
-        "artist_id": 5
+        "artist": "Kenny Loggins"
     },
     {
         "song_name": "Sweet Dreams",
         "length": 216,
-        "artist_id": 6
+        "artist": "Eurythmics"
     },
     {
         "song_name": "This Love",
         "length": 206,
-        "artist_id": 7
+        "artist": "Maroon 5"
     },
     {
         "song_name": "Mr. Brightside",
         "length": 222,
-        "artist_id": 8
+        "artist": "The Killers"
     },
     {
         "song_name": "Hey Ya!",
         "length": 235,
-        "artist_id": 9
+        "artist": "Outkast"
     },
     {
         "song_name": "Don't Stop Believin'",
         "length": 248,
-        "artist_id": 10
+        "artist": "Journey"
     },
     {
         "song_name": "I Want It That Way",
         "length": 214,
-        "artist_id": 11
+        "artist": "Backstreet Boys"
     },
     {
         "song_name": "Billie Jean",
         "length": 294,
-        "artist_id": 12
+        "artist": "Michael Jackson"
     },
     {
         "song_name": "Uptown Girl",
         "length": 198,
-        "artist_id": 13
+        "artist": "Billy Joel"
     },
     {
         "song_name": "Escape (The Pina Colada Song)",
         "length": 276,
-        "artist_id": 14
+        "artist": "Rupert Holmes"
     },
     {
         "song_name": "Come On Eileen",
         "length": 206,
-        "artist_id": 15
+        "artist": "Dexy's Midnight Runners"
     },
     {
         "song_name": "All Star",
         "length": 200,
-        "artist_id": 16
+        "artist": "Smash Mouth"
     },
     {
         "song_name": "Wonderwall",
         "length": 259,
-        "artist_id": 17
+        "artist": 17
     },
     {
         "song_name": "Stayin Alive",
         "length": 285,
-        "artist_id": 18
+        "artist": "Bee Gees"
     },
     {
         "song_name": "Take on Me",
         "length": 225,
-        "artist_id": 19
+        "artist": "a-ha"
     },
     {
         "song_name": "Rehab",
         "length": 214,
-        "artist_id": 20
+        "artist": "Amy Winehouse"
     },
     {
         "song_name": "Ignition - Remix",
         "length": 186,
-        "artist_id": 21
+        "artist": "R. Kelly"
     },
     {
         "song_name": "You Give Love A Bad Name",
         "length": 223,
-        "artist_id": 22
+        "artist": "Bon Jovi"
     },
     {
         "song_name": "Kiss",
         "length": 226,
-        "artist_id": 23
+        "artist": "Prince"
     },
     {
         "song_name": "Wannabe",
         "length": 173,
-        "artist_id": 24
+        "artist": "Spice Girls"
     },
     {
         "song_name": "Uptown Funk",
         "length": 270,
-        "artist_id": 25
+        "artist": "Bruno Mars"
     },
     {
         "song_name": "Faith",
         "length": 193,
-        "artist_id": 26
+        "artist": "George Michael"
     },
     {
         "song_name": "Oops!... I Did It Again",
         "length": 211,
-        "artist_id": 27
+        "artist": "Britney Spears"
     },
     {
         "song_name": "Lola",
         "length": 246,
-        "artist_id": 28
+        "artist": "Kinks, The"
     },
     {
         "song_name": "Respect",
         "length": 142,
-        "artist_id": 29
+        "artist": "Aretha Franklin"
     },
     {
         "song_name": "Yesterday",
         "length": 126,
-        "artist_id": 30
+        "artist": "Beatles, The"
     },
     {
         "song_name": "Funky Cold Medina",
         "length": 248,
-        "artist_id": 31
+        "artist": "Tone-Loc"
     },
     {
         "song_name": "I Wish",
         "length": 249,
-        "artist_id": 32
+        "artist": "Skee-Lo"
     },
     {
         "song_name": "Tearin' up My Heart",
         "length": 211,
-        "artist_id": 33
+        "artist": "N*SYNC"
     }
 ]

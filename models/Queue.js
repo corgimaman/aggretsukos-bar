@@ -3,3 +3,4 @@
 // look for song has not been selected in last 4 hours (date > Time.NOW - 4 hrs)
 // JOIN user + song tables
 // song history
+// bonus - verify if 2 drinks ordered before allowing queue 

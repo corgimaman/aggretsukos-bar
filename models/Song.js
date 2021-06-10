@@ -18,34 +18,11 @@ Song.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        /*{
-            artist: {
-                type: DataTypes.STRING,
-                allowNull: false
-            }
-        },*/
-        artist_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'artist',
-                key: 'id'
+        artist: {
+            type: DataTypes.STRING,
+            allowNull: false
             }
         },
-        /*album_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'album',
-                key: 'id'
-            }
-        },
-        genre_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'genre',
-                key: 'id'
-            }
-        },*/
-    },
     {
         sequelize,
         timestamps: false,

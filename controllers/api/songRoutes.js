@@ -4,7 +4,7 @@ const { Song } = require('../../models/Song');
 
 // gets a list of all the songs available
 router.get('/songs', (req, res) => {
-  Product.findAll({
+  Song.findAll({
     order: ['song_name']
   })
   .then((allSong) => {
