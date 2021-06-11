@@ -1,10 +1,11 @@
 const router = require('express').Router();
-const { Song } = require('../../models/');
+const { Song, Queue } = require('../../models/');
 
 // puts a request for a song in the que
 router.post('/', (req, res) => {
-  Song.create({
-    song_name: req.body.song_name
+  Queue.create({
+    user_id: session.body.song_name,
+    song_id: 
   })
   .then((newSong) => {
     res.json(newSong)
@@ -13,6 +14,8 @@ router.post('/', (req, res) => {
     res.json(err)
   })
 });
+
+
 
 
 // edits the request in the que
