@@ -1,41 +1,40 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Genre extends Model { }
+class Favorites extends Model {}
 
-Genre.init(
+Favorites.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true,
         },
-        genre_name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        artist_id: {
+        user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
-                model: 'artist',
-                key: 'id'
-            }
+              model: 'user',
+              key: 'id',
+            },
         },
-        album_id: {
+        song_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
-                model: 'album',
-                key: 'id'
-            }
-        }
+              model: 'song',
+              key: 'id',
+            },
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'genre',
+        modelName: 'favorites'
     }
 );
 
-module.exports = Genre;
+module.exports = Favorites;

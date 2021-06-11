@@ -1,10 +1,9 @@
 const router = require('express').Router();
-const { Song } = require('../../models/Song');
-
+const { Song } = require('../../models/');
 
 // gets a list of all the songs available
-router.get('/songs', (req, res) => {
-  Product.findAll({
+router.get('/', (req, res) => {
+  Song.findAll({
     order: ['song_name']
   })
   .then((allSong) => {
@@ -14,7 +13,6 @@ router.get('/songs', (req, res) => {
     res.json(err)
   })
 });
-
 
 // gets only one song from the list
 router.get('/:id', (req, res) => {
@@ -30,6 +28,5 @@ router.get('/:id', (req, res) => {
     res.json(err)
   })
 });
-
 
 module.exports = router;
