@@ -10,6 +10,30 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/queue', async (req, res) => {
+    try {
+        res.render('queue')
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/requests', async (req, res) => {
+    try {
+        res.render('requests')
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/songs', async (req, res) => {
+    try {
+        res.render('songs')
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 router.get('/profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
