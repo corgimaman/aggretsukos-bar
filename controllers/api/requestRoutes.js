@@ -27,13 +27,17 @@ router.post('/', withAuth, (req, res) => {
 
 
 
-
+/* If we have time to create an edit request button,
+because we are going to have to edit the song length...
+might just not allow user to edit their request - they have to step out of line
+and rejoin at the end of the line
+*/
 // edits the request in the que
-router.put('/:id', (req, res) => {
-
-    song.update(
+/*
+router.put('/:id', withAuth, (req, res) => {
+    Queue.update(
     {
-      song_name: req.body.song_name
+      song_id: req.body.song_id
     },
     {
       where: {
@@ -48,17 +52,24 @@ router.put('/:id', (req, res) => {
       res.json(err)
     })
 });
+*/
 
 
 // deletes the request in the que
-router.delete('/:id', (req, res) => {
-  Song.destroy({
+router.delete('/:id', withAuth, (req, res) => {
+  Queue.destroy({
     where: {
-      id: req.params.id
+      user_id: req.session.user_id
     }
   })
-    .then((deletedSong) => {
-      res.json(deletedSong)
+    .then((deletedRow) => {
+      if(deletedRow = 1) {
+        console.log("Song deleted successfully")
+        res.status(200).end();
+      } else {
+        console.log("You are not in the queue!")
+        res.status(404).end();
+      }
     })
     .catch((err) => {
       res.json(err)
