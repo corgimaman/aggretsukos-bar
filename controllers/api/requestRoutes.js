@@ -1,18 +1,27 @@
 const router = require('express').Router();
 const { Song, Queue } = require('../../models/');
 
-// puts a request for a song in the que
 router.post('/', (req, res) => {
+  // get the length of the song by searching the database by songid
+  const length = await Song.findByPk(req.body.song_id, {
+    attributes: ['length']
+  });
+
+  // make sure it returns as an integer and not a string
+  length = PARSEINT(length);
+
+  // Create new queue row
   Queue.create({
-    user_id: session.body.song_name,
-    song_id: 
+    user_id: req.session.user_id,
+    song_id: req.body.song_id,
+    length_song: length
   })
   .then((newSong) => {
-    res.json(newSong)
+    res.status(200).json(newSong)
   })
   .catch((err) => {
-    res.json(err)
-  })
+    res.status(500).json(err)
+  });
 });
 
 
