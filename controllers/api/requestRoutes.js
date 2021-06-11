@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Song, Queue } = require('../../models/');
+const withAuth = require('../../utils/auth');
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   // get the length of the song by searching the database by songid
   const length = await Song.findByPk(req.body.song_id, {
     attributes: ['length']
