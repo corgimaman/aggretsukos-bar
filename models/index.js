@@ -9,7 +9,7 @@ const Requests = require('./Requests');
 const Song = require('./Song');
 const User = require('./User');
 
-
+//TO DO: file needs association for favorites
 
 
 

@@ -1,5 +1,6 @@
-
-
+// TODO SELECT FROM (Queue) WHERE (song_completed = false) and SUM(requested_time) and first til user_id
+// convert requested time from seconds to minutes
+// return minutes remaining
 
 /*
 
