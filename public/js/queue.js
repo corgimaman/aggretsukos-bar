@@ -103,7 +103,7 @@ function waitlist() {
     }
   
     function getMessage() {
-      var count = pjs.query("SELECT COUNT(*) FROM waitlist WHERE location = ?", location)[0]["COUNT(*)"];
+      var count = pjs.query("SELECT COUNT(*) FROM queue WHERE song_completed = FALSE", location)[0]["COUNT(*)"];
       switch (count) {
         case 0:
           return "There is no one currently on the waitlist!";

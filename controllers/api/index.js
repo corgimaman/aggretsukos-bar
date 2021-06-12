@@ -1,11 +1,11 @@
 const router = require('express').Router();
 
 const songsRoutes = require('./songsRoutes');
-const requestRoutes = require('./requestRoutes');
+const queueRoutes = require('./queueRoutes');
 const userRoutes = require('./userRoutes');
 
 router.use('/songs', songsRoutes);
-router.use('/request', requestRoutes);
+router.use('/queue', queueRoutes);
 router.use('/users', userRoutes);
 
 module.exports = router;
