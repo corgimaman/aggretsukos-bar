@@ -25,13 +25,13 @@ Queue.init(
               key: 'id',
             },
         },
-        // user_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //       model: 'user',
-        //       key: 'id',
-        //     },
-        // },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'user',
+              key: 'id',
+            },
+        },
         requested_time: {
             type: DataTypes.DATE,
             allowNull: false,
