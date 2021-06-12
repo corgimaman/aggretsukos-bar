@@ -1,23 +1,18 @@
-// queue has many users
-// queue has many songs
-// user has many favorite songs
-// user has 1 request(?)
-const Favorites = require('./Favorites');
+//const Favorites = require('./Favorites');
 const Order = require('./Order');
 const Queue = require('./Queue');
-const Requests = require('./Requests');
+//const Requests = require('./Requests');
 const Song = require('./Song');
 const User = require('./User');
 
-//TO DO: file needs association for favorites
-
-
+Song.hasMany(Queue)
+Queue.belongsTo(Song)
 
 module.exports = {
-    Favorites,
+  //  Favorites,
     Order,
     Queue,
-    Requests,
+  //  Requests,
     Song,
     User
 };
