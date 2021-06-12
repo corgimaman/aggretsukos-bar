@@ -4,8 +4,6 @@ const routes = require('./controllers');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 
-const Seeds = require('./seeds/');
-
 const path = require('path');
 
 const sequelize = require('./config/connection');
@@ -37,7 +35,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App is Now Listening on Port ${PORT}`));
-  Seeds;
 });

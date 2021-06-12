@@ -12,7 +12,7 @@ const seedAll = async () => {
     console.log('\n----- SONGS SEEDED -----\n');
 
 
-    //process.exit(0);
+    process.exit(0);
 };
 
 seedAll();
