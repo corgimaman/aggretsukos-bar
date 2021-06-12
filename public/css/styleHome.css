@@ -6,8 +6,10 @@ body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
-    background-image: url('../../assets/aggre-background.png');
-    background-size:100%;
+    background-image: url('../assets/aggre-background.png');
+    background-repeat: no-repeat;
+    background-size:fill;
+    background-position: center;
 }
 
 #titleMain {
