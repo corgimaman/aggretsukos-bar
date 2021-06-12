@@ -29,7 +29,7 @@ Song.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'songs',
+        modelName: 'song',
     }
 );
 

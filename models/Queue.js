@@ -21,24 +21,17 @@ Queue.init(
         song_id: {
             type: DataTypes.INTEGER,
             references: {
-              model: 'songs',
+              model: 'song',
               key: 'id',
             },
         },
-        length_song: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'songs',
-              key: 'length'
-            },
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'user',
-              key: 'id',
-            },
-        },
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //       model: 'user',
+        //       key: 'id',
+        //     },
+        // },
         requested_time: {
             type: DataTypes.DATE,
             allowNull: false,
