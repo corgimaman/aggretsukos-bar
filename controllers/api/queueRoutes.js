@@ -2,6 +2,26 @@ const router = require('express').Router();
 const { Song, Queue } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
+router.get('/', async (req, res) => {
+    Queue.findAll({
+        order: 'id',
+        where: {
+           song_completed: false 
+        }
+    }).then((dbQueue) => {
+    // get queue information
+    const queue = dbQueue.map((queue) => queue.get({plain: true}));
+    // render songs on the songs.handelbars file
+    res.render("queue", {
+      layout: "queue",
+      queue
+    }); 
+    }).catch((err) => {
+        res.json(err)
+    })
+});
+
+
 router.post('/', withAuth, async (req, res) => {
   // get the length of the song by searching the database by songid
   const length = await Song.findByPk(req.body.song_id, {
