@@ -44,3 +44,14 @@ color:rgb(168, 168, 168);
     margin: 10px;
     padding: 6px;
 }
+
+#queue{
+    border: white solid 3px;
+    padding: 6px;
+    margin:15px;
+}
+
+#queueTable{
+    margin: 10px;
+    padding: 6px;
+}

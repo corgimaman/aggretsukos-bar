@@ -5,46 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/songs.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Song List</title>
 </head>
 <body>
 
     <nav>
-    <ul class="menu">
+      <ul class="menu">
         <li class="item"><a href="#">Home</a></li>
         <li class="item"><a href="#">About Us</a></li>
         <li class="item"><a href="#">Songs</a></li>
-        <li class="item"><a href="#">Services</a></li>
-    </ul>
+        <li class="item"><a href="#">Menu</a></li>
+      </ul>
     </nav>
 
     <section id="songListButtons">
-        <h2>Request a Song!</h2>
+      <h2>Request a Song!</h2>
 
-        <table id="songTable" style="width:100%">
-            <tr>
-              <th>Song Name</th>
-              <th>Artist</th>
-              <th>Request?</th>
-            </tr>
-            <tr>
-              <td>Dance With Somebody</td>
-              <td>Whitney Houston</td>
-              <td>
-                <label>
-                    <input value='songs' name="group1" type="radio" id="insertId" class="with-gap"/>
-                    <span></span>
-                </label>
-              </td>
-            </tr>
-          </table>
+      <table id="songTable" style="width:100%">
+          <tr>
+            <th>Song Name</th>
+            <th>Artist</th>
+            <th>Request?</th>
+          </tr>
+          <tr>
+            <td>Dance With Somebody</td>
+            <td>Whitney Houston</td>
+            <td>
+              <label>
+                  <input value='songs' name="group1" type="radio" id="insertId" class="with-gap"/>
+                  <span></span>
+              </label>
+            </td>
+          </tr>
+      </table>
+      
+    </section>
 
-        <!--not completely sure what song list functionality should be.
-        One radio button in the HTML, but plan is to provide Javascript functionality, so that 
-        each song has it's own displayed button(?)
-        
-        Radio buttons are specifically so that only one click is allowed.-->
+    <section id="queue">
+
+      <table id="queueTable" style="width:100%">
+          <tr>
+            <th>Performer</th>
+            <th>Singing</th>
+            <th>Time Remaining:</th>
+          </tr>
+          <tr>
+            <td>C-Mo</td>
+            <td>Still Tippin' on Fo Fo's</td>
+            <td>Next</td>
+          </tr>
+          <tr>
+            <td>Su Tio Favorito</td>
+            <td>Bailarrrrrrrrrrr</td>
+            <td>3:46</td>
+          </tr>
+          <tr>
+            <td>Teachnologist</td>
+            <td>Intl Playa's Anthem</td>
+            <td>7:19</td>
+          </tr>
+      </table>
+
     </section>
 
 </body>
