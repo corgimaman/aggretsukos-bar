@@ -30,7 +30,9 @@ router.get('/requests', async (req, res) => {
 
 router.get('/songs', async (req, res) => {
     try {
-        res.render('songs')
+        res.render('songs', {
+            style: 'songs.css'
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -60,7 +62,9 @@ router.get('/login', (req, res) => {
         return;
     }
 
-    res.render('login');
+    res.render('login', {
+        style: 'style.css'
+    });
 });
 
 module.exports = router;
