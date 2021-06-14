@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { Song, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -62,7 +62,7 @@ router.get('/requests', async (req, res) => {
     }
 });
 
-router.get('/songs', async (req, res) => {
+/*router.get('/songs', async (req, res) => {
     try {
         res.render('songs', {
             style: 'songs.css'
@@ -70,7 +70,21 @@ router.get('/songs', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-});
+});*/
+
+router.get('/songs', (req, res) => {
+    Song.findAll({
+      order: ['artist'],
+    })
+      .then((dbSongs) => {
+        const songs = dbSongs.map((song) => song.get({plain: true}));
+  
+        res.render("songs", {songs});
+      })
+      .catch((err) => {
+        res.status(500).json(err);
+      });
+  });
 
 
 router.get('/login', (req, res) => {
