@@ -1,33 +1,27 @@
-{{!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Register Form</title>
-</head>
-<body> --}}
     <div class="user">
         <header class="user__header">
             <h1 class="user__title">Aggretsukos Karaoke Registration Form</h1>
         </header>
         
-        <form class="form">
-            <div class="form__group">
-                <input type="text" placeholder="Username" class="form__input" />
+        <form class="form signup-form">
+            <div class="form-group">
+                <input type="text" placeholder="Username" id="#name-signup" class="form__input" />
             </div>
             
-            <div class="form__group">
-                <input type="email" placeholder="Email" class="form__input" />
+            <div class="form-group">
+                <input type="email" placeholder="Email" id="#email-signup" class="form__input" />
             </div>
             
-            <div class="form__group">
-                <input type="password" placeholder="Password" class="form__input" />
+            <div class="form-group">
+                <input type="password" placeholder="Password" id="#password-signup" class="form__input" />
             </div>
             
-            <button class="btn" type="button">Register</button>
+            <div class="form-group">
+                <input type="number" placeholder="Age" id="#age-signup" class="form__input" />
+            </div>
+
+            <button class="btn" type="submit">Register</button>
         </form>
     </div>
-{{!-- </body> --}}
-<script src="script.js"></script>
-{{!-- </html> --}}
+<script src="./js/script.js"></script>
+<script src="./js/newuser.js"></script>
