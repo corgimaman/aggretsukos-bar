@@ -13,11 +13,12 @@
     <ul class="menu">
         <li class="logo"><a href="/">Aggretsukos Karaoke</a></li>
         <li class="item"><a href="/">Home</a></li>
-        <li class="item"><a href="/aboutUs">About Us</a></li>
+        {{!-- <li class="item"><a href="/aboutUs">About Us</a></li> --}}
         <li class="item"><a href="/songs">Songs</a></li>
         <li class="item"><a href="/menu">Menu</a></li>
         {{#if logged_in}}
         <li class="item button"><a href="/profile">Profile</a></li>
+        <li class="item button"><a href="/" id="logout">Logout</a></li>
         {{else}}
         <li class="item button"><a href="/login">Login</a></li>
         <li class="item button secondary"><a href="/register">Register</a></li>
@@ -27,8 +28,10 @@
 </nav>
 
 <main>
-      <!-- Render the sub layout -->
-    {{{ body }}}
+    <body>
+        <!-- Render the sub layout -->
+        {{{ body }}}
+    </body>
 </main>
 
 </body>
