@@ -48,7 +48,9 @@ router.get('/queue', async (req, res) => {
 
 router.get('/register', async (req, res) => {
     try {
-        res.render('register')
+        res.render('register', {
+            style: 'register.css'
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -62,28 +64,20 @@ router.get('/requests', async (req, res) => {
     }
 });
 
-/*router.get('/songs', async (req, res) => {
-    try {
-        res.render('songs', {
-            style: 'songs.css'
-        })
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});*/
-
-router.get('/songs', (req, res) => {
-    Song.findAll({
+router.get('/songs', async (req, res) => {
+    try { Song.findAll({
       order: ['artist'],
     })
       .then((dbSongs) => {
         const songs = dbSongs.map((song) => song.get({plain: true}));
   
-        res.render("songs", {songs});
-      })
-      .catch((err) => {
+        res.render('songs', {
+            songs,
+            style: 'songs.css'
+        });
+      })} catch(err) {
         res.status(500).json(err);
-      });
+      };
   });
 
 
