@@ -13,13 +13,19 @@
       </tr>
     </thead>
     <tbody>
+      {{!-- {{#each queue}} --}}
       <tr>
-        {{!-- {{#each queue}} --}}
         <th scope="row">1</th>
-        <td>{{John}}</td>
-        <td>{{Africa}}</td>
-        <td>5 min</td>
+        <td>{{User.username}}</td>
+        <td>{{Song.song_name}}</td>
+        {{!- Sum of length until this person:}}
+        <td>{{length}}</td>
+        <td><button id="{{Queue.id}}">Song Completed?</button></td>
+        {{#if User.id = session.user_id}}
+        <button id="{{User.id}}">Delete Request</button>
+        {{/if}}
       </tr>
+      {{!-- {{each}} --}}
       <tr>
         <th scope="row">2</th>
         <td>{{James}}</td>

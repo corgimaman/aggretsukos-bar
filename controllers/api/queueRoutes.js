@@ -9,8 +9,12 @@ router.get('/', async (req, res) => {
            song_completed: false 
         }
     }).then((dbQueue) => {
-    // get queue information
+    // get queue information - contains userid, songid, and length of song in seconds
     const queue = dbQueue.map((queue) => queue.get({plain: true}));
+    // need to sum length of songs for each row,...,,lol
+
+    // need to pull username and song name, artist
+
     // render songs on the songs.handelbars file
     console.log(queue)
     res.render("queue", {
@@ -43,28 +47,19 @@ router.post('/', withAuth, async (req, res) => {
     length_song: length
   })
   .then((newSong) => {
-    console.log("okwey")
     res.status(200).json(newSong)
   })
   .catch((err) => {
-    console.log("wey")
     res.status(500).json(err)
   });
 });
 
 
-
-/* If we have time to create an edit request button,
-because we are going to have to edit the song length...
-might just not allow user to edit their request - they have to step out of line
-and rejoin at the end of the line
-*/
-// edits the request in the que
-/*
+// marks song as completed and removes from queue fetch display
 router.put('/:id', withAuth, (req, res) => {
     Queue.update(
     {
-      song_id: req.body.song_id
+      song_completed: true
     },
     {
       where: {
@@ -79,7 +74,6 @@ router.put('/:id', withAuth, (req, res) => {
       res.json(err)
     })
 });
-*/
 
 
 // deletes the request in the que
