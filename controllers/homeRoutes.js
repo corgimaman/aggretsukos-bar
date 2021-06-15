@@ -26,7 +26,9 @@ router.get('/home', async (req, res) => {
 
 router.get('/menu', async (req, res) => {
     try{
-        res.render('menu')
+        res.render('menu', {
+            title: "Aggretsukos Karaoke Bar Food and Drink"
+        })
     } catch (err) {
         res.status(500).json(err);
     }
