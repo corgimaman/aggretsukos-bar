@@ -1,8 +1,8 @@
 <div>
   <h1 class="text-center text-light display-4">View The Queue To Sing:</h1>
 </div>
-
-
+{{debug queue}}
+{{#if queue.length}}
 <table class=" mt-5 table table-striped bg-light border-dark rounded">
     <thead>
       <tr>
@@ -13,19 +13,19 @@
       </tr>
     </thead>
     <tbody>
-      {{!-- {{#each queue}} --}}
-      <tr>
-        <th scope="row">1</th>
-        <td>{{User.username}}</td>
-        <td>{{Song.song_name}}</td>
-        {{!- Sum of length until this person:}}
-        <td>{{length}}</td>
-        <td><button id="{{Queue.id}}">Song Completed?</button></td>
-        {{#if User.id = session.user_id}}
-        <button id="{{User.id}}">Delete Request</button>
-        {{/if}}
-      </tr>
-      {{!-- {{each}} --}}
+      {{#each queue as |queue|}}
+        <tr>
+          <th scope="row">1</th>
+          <td>{{user.username}}</td>
+          <td>{{queue.song.song_name}}</td>
+          {{!- Sum of length until this person:}}
+          <td>{{queue.length}}</td>
+          <td><button id="{{queue.id}}">Song Completed?</button></td>
+          {{!-- {{#if user.id = session.user_id}}
+          <button id="{{user.id}}">Delete Request</button>
+          {{/if}} --}}
+        </tr>
+      {{/each}}
       <tr>
         <th scope="row">2</th>
         <td>{{James}}</td>
@@ -34,3 +34,4 @@
       </tr>
     </tbody>
 </table>
+{{/if}}
