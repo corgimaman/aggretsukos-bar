@@ -40,7 +40,9 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/queue', async (req, res) => {
     try {
-        res.render('queue')
+        res.render('queue', {
+            title: "Aggretsukos Karaoke Bar - Song Queue"
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -49,7 +51,8 @@ router.get('/queue', async (req, res) => {
 router.get('/register', async (req, res) => {
     try {
         res.render('register', {
-            style: 'register.css'
+            style: 'register.css',
+            title: "Register for an account at Aggretsukos Karaoke Bar"
         })
     } catch (err) {
         res.status(500).json(err);
@@ -73,7 +76,8 @@ router.get('/songs', async (req, res) => {
   
         res.render('songs', {
             songs,
-            style: 'songs.css'
+            style: 'songs.css',
+            title: "Aggretsukos Karaoke Bar - Song Bank"
         });
       })} catch(err) {
         res.status(500).json(err);
@@ -88,7 +92,8 @@ router.get('/login', (req, res) => {
     }
 
     res.render('login', {
-        style: 'style.css'
+        style: 'style.css',
+        title: "Log In to Aggretsukos Karaoke Bar"
     });
 });
 
