@@ -24,19 +24,31 @@ router.get('/', async (req, res) => {
 
 console.log("yawey")
 router.post('/', withAuth, async (req, res) => {
+  console.log("we made it to the route!!11!")
+  console.log(req.body)
+
+  const songId = JSON.parse(req.body.radio);
   // get the length of the song by searching the database by songid
-  const length = await Song.findByPk(req.body, {
+  let length = await Song.findByPk(songId, {
     attributes: ['length']
+  }).then((dbSong) => {
+    const hello = dbSong.get({plain: true});
+    return hello;
   });
+
+  console.log("line 40:")
+  console.log(length)
+  console.log("end line 40")
   
-  // make sure it returns as an integer and not a string
-  length = PARSEINT(length);
+// make sure it returns as an integer and not an OBJECT!!!!
+  //length = parseInt(length);
+  length = length.value;
   
   console.log(length)
   // Create new queue row
   Queue.create({
     user_id: req.session.user_id,
-    song_id: req.body,
+    song_id: songId,
     length_song: length
   })
   .then((newSong) => {
