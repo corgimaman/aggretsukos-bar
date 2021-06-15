@@ -1,181 +1,48 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    background-color: black;
-}
-
 body{
-    font-family: sans-serif;
-    background-size: 200% 100% !important;
-    animation: move 10s ease infinite;
-    transform: translate3d(0, 0, 0);
-    height: 100vh;
-    display:flex;
-    flex-direction: column;
-}
-/* =========For Navbar========== */
-nav{
-    background: #000000;
-    color: white;
-    padding: 5px 20px;
-}
-ul{
-    list-style-type: none;
-}
-.menu li{
-    font-size: 16px;
-    padding: 15px 5px;
-}
-.menu li a{
-    display: block;
-}
-.logo a{
-    font-size: 30px;
-    color: rgb(216, 214, 122);
-    text-decoration: none;
-}
-.logo a:hover{
+    background-color: rgb(53, 52, 52);
     color:white;
-}
-
-/* ===menu for mobile ===*/
-.menu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-.toggle{
-    order: 1;
-}
-.item.button{
-    order: 2;
-}
-.item{
     width: 100%;
-    text-align: center;
-    order: 3;
-    display: none;
-}
-.item a{
-    color: rgb(216, 214, 122);
-}
-.item a:hover{
-    color: white;
-}
-.item.active{
-    display: block;
+    height:100%;
 }
 
-.toggle{
-    cursor: pointer;
-}
-.bars{
-    background: #999;
-    display: inline-block;
-    height: 2px;
+.menu {
     position: relative;
-    width: 18px;
-}
-.bars::before,.bars::after{
-    background: #999999;
-    content: "";
-    display: block;
-    height: 2px;
-    position: absolute;
-    width: 18px;
-}
-.bars::before{
-    top: 5px;
-}
-.bars::after{
-    top: -5px;
+    background-color: black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #E3E2DF;
 }
 
-/* ===menu for tablet ===*/
-@media all and (min-width: 468px){
-    .menu{
-        justify-content: center;
-    }
-    .logo{
-        flex: 1;
-    }
-    .item.button{
-        width: auto;
-        order: 1;
-        display: block;
-    }
-
-    .toggle{
-        order: 2;
-    }
-    .button.secondary{
-        border: 0;
-    }
-    .button a {
-        text-decoration: none;
-        padding: 7px 15px;
-        background: rgb(0, 0, 0);
-        border: 1px solid #ffffff;
-        border-radius: 50em;
-    }
-    .button.secondary a{
-        background: transparent;
-    }
-    .button a:hover{
-        transition: all .25s;
-        color: rgb(255, 255, 255);
-    }
-    .button.secondary a:hover{
-        color: rgb(255, 255, 255);
-    }   
-}
-@media all and (min-width: 768px){
-    .item{
-        display: block;
-        width: auto;
-    }
-    .toggle{
-        display: none;
-    }
-    .logo {
-        order: 0;
-    }
-    .item {
-        order: 1;
-    }
-    .button {
-        order: 2;
-    }
-
-    .menu li {
-        padding: 15px 10px;
-    }
-    .menu li.button {
-        padding-right: 0;
-    }
+.menu li {
+    display: inline;
+    padding: 10px;
+    font-size: 20px;
 }
 
-h2{
-    ;
+.menu a {
+text-decoration: none; 
+/* This is so there's no underline on the nagivation links */
+color:#E3E2DF;
+padding: 8px;
+font-variant: normal;
+font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+.menu a:hover {
+color:rgb(168, 168, 168);
 }
 
 #songListButtons{
-    background-color: rgb(0, 0, 0);
-    color: rgb(216, 214, 122);
-    width: 98%;
-    height:100%;
-    border: rgb(214, 210, 210) solid 3px;
+    border: white solid 3px;
     padding: 6px;
     margin:15px;
-    align-items: center;
 }
 
 #songTable{
     margin: 10px;
     padding: 6px;
-    align-items: center;
 }
 
 #queue{

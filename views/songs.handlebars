@@ -1,18 +1,19 @@
-<h2>Song Search</h2>
+<h2 class="d-flex justify-content-center">Song Search</h2>
 
-<section id="songListButtons">
+<section id="songListButtons" class="d-flex justify-content-center">
       <form id="requestForm">
         {{#each songs}}
           <tr>
-            <td>{{song_name}}</td>
-            <td>{{artist}}</td>
             <td>
               <label>
                   <input type="radio" name="songIds" value="{{id}}" class="with-gap"/>
                   <span></span>
               </label>
             </td>
+            <td>{{song_name}}</td>
+            <td>by {{artist}}</td>
           </tr>
+          <br>
         {{/each}}
         <div class="d-flex justify-content-center">
           <button class="btn btn-dark text-center" type="submit">Request Song</button>
