@@ -23,6 +23,7 @@ router.get('/', async (req, res) => {
     res.render('queue', {
       style: 'queue.css',
       layout: 'queue',
+      title: "Aggretsukos Karaoke Bar - Song Queue",
       queue
     });
     res.status(200).json(queue)

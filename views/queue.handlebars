@@ -35,5 +35,34 @@
     </tbody>
 </table>
 {{else}}
-<h2>Queue is empty! Login and request songs.</h2>
+<h2>Queue is empty! Login and request songs. Here is an example of Queue:</h2>
+<table class=" mt-5 table table-striped bg-light border-dark rounded">
+    <thead>
+      <tr>
+        <th scope="col" id="numberId">#</th>
+        <th scope="col" id="userNameId">Name</th>
+        <th scope="col" id="SongId">Song Name</th>
+        <th scope="col">Singing In...</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>username</td>
+          <td>song name</td>
+          {{!- Sum of length until this person:}}
+          <td>length of song</td>
+          <td><button id="queue-id">Song Completed?</button></td>
+          <button id="user-id">Delete Request (if its your song)</button>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>username2</td>
+          <td>song name2</td>
+          {{!- Sum of length until this person:}}
+          <td>length of song</td>
+          <td><button id="queue-id">Song Completed?</button></td>
+        </tr>
+    </tbody>
+</table>
 {{/if}}
