@@ -46,6 +46,7 @@ router.get('/profile', withAuth, async (req, res) => {
         res.render('profile', {
             ...user,
             logged_in: true,
+            style: 'profile.css',
             title: "Aggretsukos Karaoke Bar - Your Profile"
         });
     } catch (err) {
