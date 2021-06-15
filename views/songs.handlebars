@@ -1,54 +1,25 @@
-<section id="songListButtons">
-  <h2>Request a Song!</h2>
+<h2 class="d-flex justify-content-center">Song Search</h2>
 
-  <table id="songTable" style="width:100%">
-      <tr>
-        <th>Song Name</th>
-        <th>Artist</th>
-        <th>Request?</th>
-      </tr>
+<section id="songListButtons" class="d-flex justify-content-center">
       <form id="requestForm">
         {{#each songs}}
           <tr>
-            <td>{{song_name}}</td>
-            <td>{{artist}}</td>
             <td>
               <label>
                   <input type="radio" name="songIds" value="{{id}}" class="with-gap"/>
                   <span></span>
               </label>
             </td>
+            <td>{{song_name}}</td>
+            <td>by {{artist}}</td>
           </tr>
+          <br>
         {{/each}}
-          <button class="btn" type="submit">Request Song</button>
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-dark text-center" type="submit">Request Song</button>
+        </div>
       </form>
-  </table>
-  
+  </table>  
 </section>
 
-<section id="queue">
-
-  <table id="queueTable" style="width:100%">
-      <tr>
-        <th>Performer</th>
-        <th>Singing</th>
-        <th>Time Remaining:</th>
-      </tr>
-      <tr>
-        <td>C-Mo</td>
-        <td>Still Tippin' on Fo Fo's</td>
-        <td>Next</td>
-      </tr>
-      <tr>
-        <td>Su Tio Favorito</td>
-        <td>Bailarrrrrrrrrrr</td>
-        <td>3:46</td>
-      </tr>
-      <tr>
-        <td>Teachnologist</td>
-        <td>Intl Playa's Anthem</td>
-        <td>7:19</td>
-      </tr>
-  </table>
-</section>
 <script src="./js/requests.js"></script>

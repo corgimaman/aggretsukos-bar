@@ -1,67 +1,101 @@
 const router = require('express').Router();
-const { Song, Queue } = require('../../models/');
+const { Song, Queue, User } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
-    Queue.findAll({
-        order: 'id',
-        where: {
-           song_completed: false 
-        }
-    }).then((dbQueue) => {
-    // get queue information
-    const queue = dbQueue.map((queue) => queue.get({plain: true}));
-    // render songs on the songs.handelbars file
-    res.render("queue", {
-      layout: "queue",
+  Queue.findAll({
+    order: ['id'],
+    where: {
+      song_completed: false
+    },
+    include: [{
+      model: Song,
+      attributes: ['song_name']
+    },
+    {
+      model: User,
+      attributes: ['username']
+    }],
+  }).then((dbQueue) => {
+    const queue = dbQueue.map((queues) => queues.get({plain: true}));
+    //const queue = dbQueue.get({ plain: true })
+    console.log(queue)
+    res.render('queue', {
+      style: 'queue.css',
+      layout: 'queue',
+      title: "Aggretsukos Karaoke Bar - Song Queue",
       queue
-    }); 
-    }).catch((err) => {
-        res.json(err)
-    })
+    });
+    res.status(200).json(queue)
+   /* console.log("success!")
+    res.status(200).json(dbQueue);    
+    return dbQueue;*/
+  }).catch((err) => {
+    console.log("no success")
+    console.log(err)
+    res.json(err)
+  })
+
 });
 
+/* router.get('/', async (req, res) => {
+  try {
+    const queueData = Queue.findAll({
+      order: ['id'],
+      where: {
+        song_completed: false
+      },
+      include: [{
+        model: Song,
+        attributes: ['song_name']
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }],
+    });
+
+    const queue = queueData.map((queues) => queues.get({ plain: true }))
+    res.status(200).json(queue);    
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(err)
+  }
+}) */
 
 console.log("yawey")
 router.post('/', withAuth, async (req, res) => {
+
+  const songId = JSON.parse(req.body.radio);
   // get the length of the song by searching the database by songid
-  const length = await Song.findByPk(req.body, {
+  let length = await Song.findByPk(songId, {
     attributes: ['length']
+  }).then((dbSong) => {
+    const hello = dbSong.get({plain: true});
+    return hello;
   });
-  
-  // make sure it returns as an integer and not a string
-  length = PARSEINT(length);
-  
-  console.log(length)
+// make sure it returns as an integer and not an OBJECT!!!!
+  length = length.value;
   // Create new queue row
   Queue.create({
     user_id: req.session.user_id,
-    song_id: req.body,
+    song_id: songId,
     length_song: length
   })
   .then((newSong) => {
-    console.log("okwey")
     res.status(200).json(newSong)
   })
   .catch((err) => {
-    console.log("wey")
     res.status(500).json(err)
   });
 });
 
 
-
-/* If we have time to create an edit request button,
-because we are going to have to edit the song length...
-might just not allow user to edit their request - they have to step out of line
-and rejoin at the end of the line
-*/
-// edits the request in the que
-/*
+// marks song as completed and removes from queue fetch display
 router.put('/:id', withAuth, (req, res) => {
     Queue.update(
     {
-      song_id: req.body.song_id
+      song_completed: true
     },
     {
       where: {
@@ -76,7 +110,6 @@ router.put('/:id', withAuth, (req, res) => {
       res.json(err)
     })
 });
-*/
 
 
 // deletes the request in the que

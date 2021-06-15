@@ -2,10 +2,22 @@ const router = require('express').Router();
 const { Song, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+
 router.get('/', async (req, res) => {
     try {
+        res.render('confirmpage-progress', {
+            layout: 'confirmpage-progress'
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/home', async (req, res) => {
+    try {
         res.render('homepage', {
-            style: 'main.css'
+            style: 'main.css',
+            title: "Aggretsukos Karaoke Bar"
         })
     } catch (err) {
         res.status(500).json(err);
@@ -14,7 +26,9 @@ router.get('/', async (req, res) => {
 
 router.get('/menu', async (req, res) => {
     try{
-        res.render('menu')
+        res.render('menu', {
+            title: "Aggretsukos Karaoke Bar - Food and Drink"
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -32,7 +46,8 @@ router.get('/profile', withAuth, async (req, res) => {
         res.render('profile', {
             ...user,
             logged_in: true,
-            style: 'profile.css'
+            style: 'profile.css',
+            title: "Aggretsukos Karaoke Bar - Your Profile"
         });
     } catch (err) {
         res.status(500).json(err);
@@ -41,7 +56,9 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/queue', async (req, res) => {
     try {
-        res.render('queue')
+        res.render('queue', {
+            title: "Aggretsukos Karaoke Bar - Song Queue"
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -49,7 +66,10 @@ router.get('/queue', async (req, res) => {
 
 router.get('/register', async (req, res) => {
     try {
-        res.render('register')
+        res.render('register', {
+            style: 'register.css',
+            title: "Register for an account at Aggretsukos Karaoke Bar"
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -63,28 +83,21 @@ router.get('/requests', async (req, res) => {
     }
 });
 
-/*router.get('/songs', async (req, res) => {
-    try {
-        res.render('songs', {
-            style: 'songs.css'
-        })
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});*/
-
-router.get('/songs', (req, res) => {
-    Song.findAll({
+router.get('/songs', async (req, res) => {
+    try { Song.findAll({
       order: ['artist'],
     })
       .then((dbSongs) => {
         const songs = dbSongs.map((song) => song.get({plain: true}));
   
-        res.render("songs", {songs});
-      })
-      .catch((err) => {
+        res.render('songs', {
+            songs,
+            style: 'songs.css',
+            title: "Aggretsukos Karaoke Bar - Song Bank"
+        });
+      })} catch(err) {
         res.status(500).json(err);
-      });
+      };
   });
 
 
@@ -95,7 +108,8 @@ router.get('/login', (req, res) => {
     }
 
     res.render('login', {
-        style: 'style.css'
+        style: 'style.css',
+        title: "Log In to Aggretsukos Karaoke Bar"
     });
 });
 

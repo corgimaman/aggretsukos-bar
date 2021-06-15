@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
     const songs = dbSongs.map((song) => song.get({plain: true}));
     // render songs on the songs.handelbars file
     res.render("songList", {
+      style: 'songs.css',
       layout: "songs",
       songs
     });
