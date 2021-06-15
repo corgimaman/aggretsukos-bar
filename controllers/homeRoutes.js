@@ -27,7 +27,7 @@ router.get('/home', async (req, res) => {
 router.get('/menu', async (req, res) => {
     try{
         res.render('menu', {
-            title: "Aggretsukos Karaoke Bar Food and Drink"
+            title: "Aggretsukos Karaoke Bar - Food and Drink"
         })
     } catch (err) {
         res.status(500).json(err);
@@ -45,7 +45,8 @@ router.get('/profile', withAuth, async (req, res) => {
 
         res.render('profile', {
             ...user,
-            logged_in: true
+            logged_in: true,
+            title: "Aggretsukos Karaoke Bar - Your Profile"
         });
     } catch (err) {
         res.status(500).json(err);
