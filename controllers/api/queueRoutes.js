@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
     // get queue information
     const queue = dbQueue.map((queue) => queue.get({plain: true}));
     // render songs on the songs.handelbars file
+    console.log(queue)
     res.render("queue", {
       layout: "queue",
       queue
