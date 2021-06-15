@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
     // get queue information
     const queue = dbQueue.map((queue) => queue.get({plain: true}));
     // render songs on the songs.handelbars file
+    console.log(queue)
     res.render("queue", {
       layout: "queue",
       queue
@@ -24,19 +25,21 @@ router.get('/', async (req, res) => {
 
 console.log("yawey")
 router.post('/', withAuth, async (req, res) => {
+
+  const songId = JSON.parse(req.body.radio);
   // get the length of the song by searching the database by songid
-  const length = await Song.findByPk(req.body, {
+  let length = await Song.findByPk(songId, {
     attributes: ['length']
+  }).then((dbSong) => {
+    const hello = dbSong.get({plain: true});
+    return hello;
   });
-  
-  // make sure it returns as an integer and not a string
-  length = PARSEINT(length);
-  
-  console.log(length)
+// make sure it returns as an integer and not an OBJECT!!!!
+  length = length.value;
   // Create new queue row
   Queue.create({
     user_id: req.session.user_id,
-    song_id: req.body,
+    song_id: songId,
     length_song: length
   })
   .then((newSong) => {
