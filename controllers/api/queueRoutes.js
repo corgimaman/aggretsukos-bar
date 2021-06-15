@@ -19,12 +19,13 @@ router.get('/', async (req, res) => {
   }).then((dbQueue) => {
     const queue = dbQueue.map((queues) => queues.get({plain: true}));
     //const queue = dbQueue.get({ plain: true })
-    res.render('queueList', {
+    console.log(queue)
+    res.render('queue', {
       style: 'queue.css',
       layout: 'queue',
       queue
     });
-    //res.status(200).json(queue)
+    res.status(200).json(queue)
    /* console.log("success!")
     res.status(200).json(dbQueue);    
     return dbQueue;*/
