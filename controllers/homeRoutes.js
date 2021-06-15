@@ -4,8 +4,19 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
+        res.render('confirmpage-progress', {
+            layout: 'confirmpage-progress'
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/home', async (req, res) => {
+    try {
         res.render('homepage', {
-            style: 'main.css'
+            style: 'main.css',
+            title: "Aggretsukos Karaoke Bar"
         })
     } catch (err) {
         res.status(500).json(err);

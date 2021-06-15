@@ -5,35 +5,6 @@ body{
     height:100%;
 }
 
-.menu {
-    position: relative;
-    background-color: black;
-    padding: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: #E3E2DF;
-}
-
-.menu li {
-    display: inline;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.menu a {
-text-decoration: none; 
-/* This is so there's no underline on the nagivation links */
-color:#E3E2DF;
-padding: 8px;
-font-variant: normal;
-font-family: 'Arial Narrow Bold', sans-serif;
-}
-
-.menu a:hover {
-color:rgb(168, 168, 168);
-}
-
 #songListButtons{
     border: white solid 3px;
     padding: 6px;

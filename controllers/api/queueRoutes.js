@@ -1,31 +1,67 @@
 const router = require('express').Router();
-const { Song, Queue } = require('../../models/');
+const { Song, Queue, User } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
-    Queue.findAll({
-        order: 'id',
-        where: {
-           song_completed: false 
-        }
-    }).then((dbQueue) => {
-    // get queue information - contains userid, songid, and length of song in seconds
-    const queue = dbQueue.map((queue) => queue.get({plain: true}));
-    // need to sum length of songs for each row,...,,lol
-
-    // need to pull username and song name, artist
-
-    // render songs on the songs.handelbars file
+  Queue.findAll({
+    order: ['id'],
+    where: {
+      song_completed: false
+    },
+    include: [{
+      model: Song,
+      attributes: ['song_name']
+    },
+    {
+      model: User,
+      attributes: ['username']
+    }],
+  }).then((dbQueue) => {
+    const queue = dbQueue.map((queues) => queues.get({plain: true}));
+    //const queue = dbQueue.get({ plain: true })
     console.log(queue)
-    res.render("queue", {
-      layout: "queue",
+    res.render('queue', {
+      style: 'queue.css',
+      layout: 'queue',
+      title: "Aggretsukos Karaoke Bar - Song Queue",
       queue
-    }); 
-    }).catch((err) => {
-        res.json(err)
-    })
+    });
+    res.status(200).json(queue)
+   /* console.log("success!")
+    res.status(200).json(dbQueue);    
+    return dbQueue;*/
+  }).catch((err) => {
+    console.log("no success")
+    console.log(err)
+    res.json(err)
+  })
+
 });
 
+/* router.get('/', async (req, res) => {
+  try {
+    const queueData = Queue.findAll({
+      order: ['id'],
+      where: {
+        song_completed: false
+      },
+      include: [{
+        model: Song,
+        attributes: ['song_name']
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }],
+    });
+
+    const queue = queueData.map((queues) => queues.get({ plain: true }))
+    res.status(200).json(queue);    
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(err)
+  }
+}) */
 
 console.log("yawey")
 router.post('/', withAuth, async (req, res) => {
